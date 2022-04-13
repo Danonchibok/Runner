@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UiAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 59f77cd8a0fa9114cb7a399761386282, type: 3}
+    - {fileID: 2800000, guid: 5f97f6b537509074b9fa88072276906a, type: 3}
+    - {fileID: 2800000, guid: e7e8d220f6925a1469899fcf4588e32c, type: 3}
+    - {fileID: 2800000, guid: c1d191fe1fbb1164396138d8734ed260, type: 3}
+    - {fileID: 2800000, guid: a0e610d952f92f746901f87dd27245f7, type: 3}
+    - {fileID: 2800000, guid: 516d7ff5a9f80cb4fbc9138c8c41ea15, type: 3}
+    - {fileID: 2800000, guid: 2cb69c6558a7ff94e829047c63ff4e34, type: 3}
+    - {fileID: 2800000, guid: e1bb0d3ee25fb3b4a9b07913457df277, type: 3}
+    - {fileID: 2800000, guid: 0226fe355fc85ca4285157d4bcad0fde, type: 3}
+    - {fileID: 2800000, guid: 3a2e6ad82609b0f449540bae9619c044, type: 3}
+    - {fileID: 2800000, guid: 3e5cc0d2ead352044868c004484a18db, type: 3}
+    - {fileID: 2800000, guid: d7064d771c2c1734586718b71048c4e4, type: 3}
+    - {fileID: 2800000, guid: 9dd541c10ae7090448dfe304873dd712, type: 3}
+    - {fileID: 2800000, guid: 5bae808484ace1a458ae2a5b779ed584, type: 3}
+    - {fileID: 2800000, guid: aee7285ebed45884aa2e21db2ac63ae8, type: 3}
+    - {fileID: 2800000, guid: 044a4beaf05409244a2634cae74feaf8, type: 3}
+    - {fileID: 2800000, guid: 8a41a24b5684c244eb39f4145b9031a3, type: 3}
+    - {fileID: 2800000, guid: 0718cd3f39139c8419f9849fe1708a24, type: 3}
+    - {fileID: 2800000, guid: 64e3306f4f43cbc48aa1065c8a7bdcfe, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e7e8d220f6925a1469899fcf4588e32c, type: 3}
+  - {fileID: 21300000, guid: 9dd541c10ae7090448dfe304873dd712, type: 3}
+  - {fileID: 21300000, guid: 3e5cc0d2ead352044868c004484a18db, type: 3}
+  - {fileID: 21300000, guid: 5bae808484ace1a458ae2a5b779ed584, type: 3}
+  - {fileID: 21300000, guid: 0226fe355fc85ca4285157d4bcad0fde, type: 3}
+  - {fileID: 21300000, guid: 2cb69c6558a7ff94e829047c63ff4e34, type: 3}
+  - {fileID: 21300000, guid: 5f97f6b537509074b9fa88072276906a, type: 3}
+  - {fileID: 21300000, guid: 516d7ff5a9f80cb4fbc9138c8c41ea15, type: 3}
+  - {fileID: 21300000, guid: d7064d771c2c1734586718b71048c4e4, type: 3}
+  - {fileID: 21300000, guid: 3a2e6ad82609b0f449540bae9619c044, type: 3}
+  - {fileID: 21300000, guid: 59f77cd8a0fa9114cb7a399761386282, type: 3}
+  - {fileID: 21300000, guid: a0e610d952f92f746901f87dd27245f7, type: 3}
+  - {fileID: 21300000, guid: 044a4beaf05409244a2634cae74feaf8, type: 3}
+  - {fileID: 21300000, guid: 8a41a24b5684c244eb39f4145b9031a3, type: 3}
+  - {fileID: 21300000, guid: e1bb0d3ee25fb3b4a9b07913457df277, type: 3}
+  - {fileID: 21300000, guid: aee7285ebed45884aa2e21db2ac63ae8, type: 3}
+  - {fileID: 21300000, guid: c1d191fe1fbb1164396138d8734ed260, type: 3}
+  - {fileID: 21300000, guid: 0718cd3f39139c8419f9849fe1708a24, type: 3}
+  - {fileID: 21300000, guid: 64e3306f4f43cbc48aa1065c8a7bdcfe, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Bubble2
+  - PauseButton
+  - LargeGreenButton
+  - Present (2)
+  - GrayGlow
+  - DedHead
+  - Bubble
+  - Ded
+  - LargeRedButton
+  - LargeBranches
+  - Branches
+  - CancelButton
+  - ProgresFill
+  - ProgressBar
+  - Glow
+  - Present
+  - Bubble3
+  - SmallGreenButton
+  - SmallRedButton
+  m_RenderDataMap: {}
+  m_Tag: UiAtlas
+  m_IsVariant: 0
