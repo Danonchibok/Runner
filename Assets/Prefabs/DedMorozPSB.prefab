@@ -777,6 +777,7 @@ GameObject:
   - component: {fileID: 7206559218558754018}
   - component: {fileID: 7206559218558754017}
   - component: {fileID: 3552209129824170349}
+  - component: {fileID: 1948215897928047335}
   m_Layer: 0
   m_Name: DedMorozPSB
   m_TagString: Player
@@ -872,6 +873,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.48, y: 5.33, z: 0.34}
   m_Center: {x: -0.4, y: 3.3, z: 0}
+--- !u!114 &1948215897928047335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196538501876212553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf46a3e4775792e49a64958f14deb9c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 2ffc4b3702abb1545bd6e093325c2f5e, type: 2}
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7206559218558754018}
+        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
+        m_MethodName: OnStartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6331554250346622941
 GameObject:
   m_ObjectHideFlags: 0

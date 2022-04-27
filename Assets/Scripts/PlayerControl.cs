@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
     [SerializeField] private float _horizontalSpeed;
     [SerializeField] private float _jumpHeight;
 
+    private Vector3 _startPos;
     private Animator _animator;
     private ObstacleSpawner _obstacleSpawner;
     private Rigidbody _rigidbody;
@@ -29,6 +30,7 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
   
     private void Start()
     {
+        _startPos = transform.position;
         _pausedManager.Register(this);
         _obstacleSpawner = FindObjectOfType<ObstacleSpawner>();
         _rigidbody = GetComponent<Rigidbody>();
@@ -126,5 +128,11 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
         {
             _animator.speed = _animSpeed;
         }
+    }
+
+    public void OnStartGame()
+    {
+        transform.position = _startPos;
+        _endPosition = 0;
     }
 }

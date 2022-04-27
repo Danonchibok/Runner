@@ -12,7 +12,7 @@ public class GameUI : MonoBehaviour
     private float _collectedPoints;
     private float _progress;
 
-    private void Start()
+    private void OnEnable()
     {
         Init();
     }
@@ -41,5 +41,6 @@ public class GameUI : MonoBehaviour
         _collectedPoints = 0;
         _pointCounter.text = _collectedPoints.ToString();
     }
+       
        
 }

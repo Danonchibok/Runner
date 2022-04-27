@@ -14,7 +14,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     public float LinesOffset => _linesOffset;
 
-    public void SpawnObstaclesOnTile(RoadTile roadTile)
+    public GameObject SpawnObstaclesOnTile(RoadTile roadTile)
     {
         GameObject obstaclesContainer = new GameObject("Obstacles");
         obstaclesContainer.transform.SetParent(roadTile.transform);
@@ -32,5 +32,6 @@ public class ObstacleSpawner : MonoBehaviour
             go.transform.SetParent(obstaclesContainer.transform);
         }
 
+        return obstaclesContainer;
     }
 }

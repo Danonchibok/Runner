@@ -24,6 +24,12 @@ public class GameManager : Singltone<GameManager>
         private set { _maxPoints = value; }
     }
 
+    public int CurrentPoints
+    {
+        get => _currentPoints;
+        private set { _currentPoints = value; }
+    }
+
 
     public override void Awake()
     {
@@ -41,6 +47,7 @@ public class GameManager : Singltone<GameManager>
     {
         if (_gamesAvailable < 0) return;
         _gamesAvailable--;
+        CurrentPoints = 0;
     }
 
     public void ShowFinalScreen()
@@ -57,7 +64,7 @@ public class GameManager : Singltone<GameManager>
 
     public void ChangePoints(int points)
     {
-        _currentPoints += points;
+        CurrentPoints += points;
     }
 
     private IEnumerator ShowScreen(int delay, CanvasType canvasType)
