@@ -6,7 +6,7 @@ public class PauseManager : IPauseHandler
 {
     private List<IPauseHandler> _pauseHandlers = new List<IPauseHandler>();
 
-    public bool IsPaused { get; private set; }
+    public bool IsPaused { get; private set; } = false;
 
     public void Register(IPauseHandler pauseHandler)
     {

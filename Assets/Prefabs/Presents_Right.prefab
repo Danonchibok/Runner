@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6521901748172950299}
   - component: {fileID: -3401938795236592486}
   m_Layer: 0
-  m_Name: Presents_0
+  m_Name: Presents_Right
   m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

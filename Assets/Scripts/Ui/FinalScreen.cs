@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FinalScreen : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI _header;
     [SerializeField] private TextMeshProUGUI _presentCountText;
     [SerializeField] private TextMeshProUGUI _presentsInPoints;
     
@@ -25,6 +26,7 @@ public class FinalScreen : MonoBehaviour
         _presentCountText.text = points.ToString();
         string presentsText = Generate(points, "Подарок", "Подарка", "Подарков");
         string pointsText = Generate(points, "Балл", "Балла", "Баллов");
+        _header.text = presentsText;
         _presentsInPoints.text = $"{points} {presentsText} = {points} {pointsText}";  
     }
 

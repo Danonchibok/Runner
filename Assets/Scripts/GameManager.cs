@@ -48,6 +48,7 @@ public class GameManager : Singltone<GameManager>
         if (_gamesAvailable < 0) return;
         _gamesAvailable--;
         CurrentPoints = 0;
+        pauseManager.SetPause(false);
     }
 
     public void ShowFinalScreen()

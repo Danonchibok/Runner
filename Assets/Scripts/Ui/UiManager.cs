@@ -11,6 +11,7 @@ public enum CanvasType
     Pausemenu,
     SuccessfulFinalScreen,
     FailedFinalScreen,
+    CancelUi,
 }
 public class UiManager : Singltone<UiManager>
 {

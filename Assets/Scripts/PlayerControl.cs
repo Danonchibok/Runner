@@ -38,7 +38,6 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
 
         _runAnim = Animator.StringToHash("IsRun");
         _animSpeed = _animator.speed;
-        _animator.SetBool(_runAnim, true);
     }
 
     void Update()
@@ -134,5 +133,6 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
     {
         transform.position = _startPos;
         _endPosition = 0;
+        _animator.SetBool(_runAnim, true);
     }
 }
