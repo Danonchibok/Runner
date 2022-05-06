@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9798fa1c6882d7c49b0c59c02acdc5c4, type: 3}
-  m_Name: Center_WetFloor
+  m_Name: Right_Banner
   m_EditorClassIdentifier: 
-  linePosition: 0
+  linePosition: 1
   obstacleType: 0
-  worldObjectPrefab: {fileID: 4226923787054189209, guid: d4b1881fdfa1ac14dba6768a3798996f, type: 3}
+  worldObjectPrefab: {fileID: 5226062247476932567, guid: fe54d5142be125e409c0f656ba6d2a81, type: 3}

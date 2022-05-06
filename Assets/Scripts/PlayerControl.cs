@@ -115,6 +115,7 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
         if (collision.collider.CompareTag("Obstacle"))
         {
             OnLose.Raise();
+            _inputs.enabled = false;
         }
     }
 
@@ -136,5 +137,6 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
         transform.position = _startPos;
         _endPosition = 0;
         _animator.SetBool(_runAnim, true);
+        _inputs.enabled = true;
     }
 }

@@ -27,7 +27,7 @@ public class ObstacleSpawner : MonoBehaviour
 
             GameObject obstacle = obstacles[Random.Range(0, obstacles.Count)].worldObjectPrefab;
 
-            Vector3 position = new Vector3((int)line * _linesOffset, 0.5f, i * _spaceBetweenObstacles) + roadTile.transform.position;
+            Vector3 position = new Vector3((int)line * _linesOffset, 0, i * _spaceBetweenObstacles) + roadTile.transform.position;
             GameObject go = Instantiate(obstacle, position + obstacle.transform.position, obstacle.transform.rotation);
             go.transform.SetParent(obstaclesContainer.transform);
         }

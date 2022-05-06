@@ -25,7 +25,6 @@ public class PlayerInputSystem : MonoBehaviour
     {
         Vector2 endPosition = _inputActions.Player.PrimaryPosition.ReadValue<Vector2>();
         Vector2 direction = (endPosition - _primaryTocuhPos).normalized;
-        Debug.Log(direction);
         Move(direction);
     }
 

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9798fa1c6882d7c49b0c59c02acdc5c4, type: 3}
+  m_Name: Left_Banner
+  m_EditorClassIdentifier: 
+  linePosition: -1
+  obstacleType: 0
+  worldObjectPrefab: {fileID: 7917866702252739632, guid: a1a3778e58665be43979ab85eb4dbda4, type: 3}

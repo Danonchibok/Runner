@@ -778,6 +778,7 @@ GameObject:
   - component: {fileID: 7206559218558754017}
   - component: {fileID: 3552209129824170349}
   - component: {fileID: 1948215897928047335}
+  - component: {fileID: 571738755}
   m_Layer: 0
   m_Name: DedMorozPSB
   m_TagString: Player
@@ -841,7 +842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _horizontalSpeed: 20
-  _jumpHeight: 300
+  _jumpHeight: 320
   OnRaisePoint: {fileID: 11400000, guid: 7581243702b8ac4428330144889079ac, type: 2}
   OnLose: {fileID: 11400000, guid: 88e3864894b3e0046b6131f94dcbb3b5, type: 2}
 --- !u!54 &7206559218558754017
@@ -871,8 +872,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.48, y: 5.33, z: 0.34}
-  m_Center: {x: -0.4, y: 3.3, z: 0}
+  m_Size: {x: 4.2538815, y: 5.33, z: 0.34}
+  m_Center: {x: -0.30774212, y: 3.3, z: -0.00000002515592}
 --- !u!114 &1948215897928047335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -901,6 +902,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &571738755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196538501876212553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9980c2399d287f84ba87347c93fcb5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _directionThreshold: 0.5
 --- !u!1 &6331554250346622941
 GameObject:
   m_ObjectHideFlags: 0

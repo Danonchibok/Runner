@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GameManager : Singltone<GameManager>
 {
+    [Header("GameSettings")]
     [SerializeField] private int _gamesAvailable;
-    [Tooltip("Count of points for finish")]
     [SerializeField] private int _maxPoints;
     [SerializeField] private int _displayDelay;
+
+
     private int _currentPoints;
 
     public PauseManager pauseManager;
@@ -36,6 +38,7 @@ public class GameManager : Singltone<GameManager>
         base.Awake();
 
         pauseManager = new PauseManager();
+      
     }
 
     public void SetPause(bool isPaused)
