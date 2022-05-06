@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour, IPauseHandler
@@ -9,14 +7,15 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
     [SerializeField] private float _jumpHeight;
 
     private Vector3 _startPos;
-    private Animator _animator;
-    private ObstacleSpawner _obstacleSpawner;
-    private Rigidbody _rigidbody;
     private Coroutine _movingCoroutine;
 
     public IntEvent OnRaisePoint;
     public VoidEvent OnLose;
     private PauseManager _pausedManager => GameManager.Instance.pauseManager;
+    private PlayerInputSystem _inputs;
+    private Animator _animator;
+    private Rigidbody _rigidbody;
+    private ObstacleSpawner _obstacleSpawner;
 
     private float _startPosition;
     private float _endPosition;
@@ -32,41 +31,46 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
     {
         _startPos = transform.position;
         _pausedManager.Register(this);
+        _inputs = GetComponent<PlayerInputSystem>();
         _obstacleSpawner = FindObjectOfType<ObstacleSpawner>();
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
 
         _runAnim = Animator.StringToHash("IsRun");
         _animSpeed = _animator.speed;
+        InitMovement();
     }
 
-    void Update()
+   
+    private void InitMovement()
     {
-        if (_gamePaused) return;
+        _inputs.Jump += () =>
+        {
+            if (_grounded && !_gamePaused)
+            {
+                _grounded = false;
+                _rigidbody.AddForce(Vector3.up * _jumpHeight, ForceMode.Impulse);
+            }
+        };
 
-        Move();
+        _inputs.RightDash += () =>
+        {
+            if (_endPosition < _obstacleSpawner.LinesOffset && !_gamePaused)
+            {
+                MoveHorizontal(_horizontalSpeed);
+            }
+        };
+
+        _inputs.LeftDash += () =>
+        {
+            if (_endPosition > -_obstacleSpawner.LinesOffset && !_gamePaused)
+            {
+                MoveHorizontal(-_horizontalSpeed);  
+            }
+        };
     }
 
-    private void Move()
-    {
-        if (Input.GetKeyDown(KeyCode.RightArrow) && _endPosition < _obstacleSpawner.LinesOffset)
-        {
-            MoveHorizontal(_horizontalSpeed);
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && _endPosition > -_obstacleSpawner.LinesOffset)
-        {
-            MoveHorizontal(-_horizontalSpeed);
-        }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) && _grounded)
-        {
-            _grounded = false;
-            _rigidbody.AddForce(Vector3.up * _jumpHeight, ForceMode.Impulse);
-        }
-
-       
-    }
-
+   
     void MoveHorizontal(float moveSpeed)
     {
         _startPosition = _endPosition;
@@ -78,8 +82,6 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
             _isMoving = false;
         }
         _movingCoroutine = StartCoroutine(MoveCoroutine(moveSpeed));
-
-        
     }
 
     IEnumerator MoveCoroutine(float xVector)
