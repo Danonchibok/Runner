@@ -6,6 +6,8 @@
 
 body {
   background: url(../Images/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #999;
   font-size: 17px;
 }
@@ -56,6 +58,7 @@ a {
     left:0;
     max-width: 483px;
     max-height: 956px;
+    margin: auto;
 }
 
 /* this element makes sure we preserve 16:9 aspect ratio */

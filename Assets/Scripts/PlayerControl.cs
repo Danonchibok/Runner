@@ -5,6 +5,7 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
 {
     [SerializeField] private float _horizontalSpeed;
     [SerializeField] private float _jumpHeight;
+    [SerializeField] private Canvas _lossCanvas;
 
     private Vector3 _startPos;
     private Coroutine _movingCoroutine;
@@ -24,6 +25,8 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
     private bool _gamePaused = false;
 
     private int _runAnim;
+    private int _lossAnim;
+    private int _jumpAnim;
     private float _animSpeed;
 
   
@@ -37,6 +40,8 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
         _animator = GetComponent<Animator>();
 
         _runAnim = Animator.StringToHash("IsRun");
+        _jumpAnim = Animator.StringToHash("Jump");
+        _lossAnim = Animator.StringToHash("Loss");
         _animSpeed = _animator.speed;
         InitMovement();
     }
@@ -49,6 +54,7 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
             if (_grounded && !_gamePaused)
             {
                 _grounded = false;
+                _animator.SetTrigger(_jumpAnim);
                 _rigidbody.AddForce(Vector3.up * _jumpHeight, ForceMode.Impulse);
             }
         };
@@ -115,6 +121,9 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
         if (collision.collider.CompareTag("Obstacle"))
         {
             OnLose.Raise();
+            _lossCanvas.gameObject.SetActive(true);
+            _animator.SetBool(_runAnim, false);
+            _animator.SetTrigger(_lossAnim);
             _inputs.enabled = false;
         }
     }
@@ -136,6 +145,7 @@ public class PlayerControl : MonoBehaviour, IPauseHandler
     {
         transform.position = _startPos;
         _endPosition = 0;
+        _lossCanvas.gameObject.SetActive(false);
         _animator.SetBool(_runAnim, true);
         _inputs.enabled = true;
     }
